@@ -1,14 +1,19 @@
-export function somme(a, b) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.somme1 = exports.somme = void 0;
+function somme(a, b) {
     return a + b;
 }
+exports.somme = somme;
 console.log("******* de base : ");
 console.log(somme(10, 5));
-console.log(somme("10", "a"));
+// console.log(somme("10", "a"));
 console.log("******* avec TS on écrit a:number : ");
 // avec TS on ecrira plutôt : 
-export function somme1(a, b) {
+function somme1(a, b) {
     return a + b;
 }
+exports.somme1 = somme1;
 console.log(somme1(5, 12));
 console.log("******* autre façon on demande un retour de type number : ");
 // autre façon : 

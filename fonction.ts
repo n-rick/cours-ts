@@ -1,10 +1,10 @@
-export function somme(a, b) {
+export function somme(a: number, b: number) {
     return a + b;
 }
 
 console.log("******* de base : ");
 console.log(somme(10, 5));
-console.log(somme("10", "a"));
+// console.log(somme("10", "a"));
 
 console.log("******* avec TS on écrit a:number : ");
 // avec TS on ecrira plutôt : 

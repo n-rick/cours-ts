@@ -1,16 +1,26 @@
+"use strict";
 // importation de fonction dans un autre fichier
-import { somme as s } from "./fonction";
-console.log(s(10, 80));
-console.log('**************  | importer dynamiquement un module');
-import("./fonction").then(m => console.log(m.somme1(2, 4)));
+Object.defineProperty(exports, "__esModule", { value: true });
+// import { somme as s } from "./fonction";
+// console.log(s(10, 80));
+// console.log('**************  | importer dynamiquement un module');
+// import("./fonction").then(m => console.log(m.somme1(2, 4)));
+const personne_1 = require("./personne");
+let personne = new personne_1.Personne();
+personne.num = 200;
+personne.nom = "Wick";
+personne.prenom = "John";
+console.log(personne);
 // console.log(2 ** 8); d'abord créer le ficher en ts puis le transpiler avec la commande tsc monFichier.ts
 // puis appeler le ficher avce la commande node monFIchier.js
 // typage de variable
+/*
 var x = 2;
-var y = 5;
-var z;
+var y: number = 5;
+var z: number | string;
 z = 2;
-z = "hello";
+z = "hello"
+*/
 /*
 // Coalescence nulle (??)
 

@@ -1,3 +1,4 @@
+"use strict";
 // promesse
 var carre = (a) => {
     return new Promise((resolve) => {
