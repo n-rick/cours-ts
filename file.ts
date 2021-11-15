@@ -71,5 +71,8 @@ for(const key in objet){
 
 // importation de fonction dans un autre fichier
 
-import {somme as s} from "./fonction";
-console.log(s(10,80));
+import { somme as s } from "./fonction";
+console.log(s(10, 80));
+
+console.log('**************  | importer dynamiquement un module');
+import('./fonction').then(m => console.log(m.somme1(2, 4)));

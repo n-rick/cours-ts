@@ -1,7 +1,5 @@
-"use strict";
 // console.log(2 ** 8); d'abord créer le ficher en ts puis le transpiler avec la commande tsc monFichier.ts
 // puis appeler le ficher avce la commande node monFIchier.js
-exports.__esModule = true;
 // typage de variable
 var x = 2;
 var y = 5;
@@ -66,5 +64,7 @@ for(const key in objet){
 
 */
 // importation de fonction dans un autre fichier
-var fonction_1 = require("./fonction");
-console.log((0, fonction_1.somme)(10, 80));
+import { somme as s } from "./fonction";
+console.log(s(10, 80));
+console.log('**************  | importer dynamiquement un module');
+import('./fonction').then(m => console.log(m.somme1(2, 4)));

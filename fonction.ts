@@ -8,7 +8,7 @@ console.log(somme("10", "a"));
 
 console.log("******* avec TS on écrit a:number : ");
 // avec TS on ecrira plutôt : 
-function somme1(a: number, b: number) {
+export function somme1(a: number, b: number) {
     return a + b;
 }
 
