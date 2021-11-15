@@ -1,4 +1,4 @@
-import {Adresse} from './adresse';
+import { Adresse } from './adresse';
 export class Personne {
     // private _num: number;
     // private _nom: string;
@@ -7,7 +7,7 @@ export class Personne {
     // simplification on met les visibilitées dans le constructeur 
 
     // CREATION DU CONSTRUCTEUR
-    public constructor(private _num: number = 0, private _nom: string = "", private _prenom: string = "", private _adresse:Adresse ) {
+    public constructor(private _num: number = 0, private _nom: string = "", private _prenom: string = "", private _adresse: Adresse|null = null) {
         this.num = _num;
         // this.nom = nom;
         // this.prenom = prenom;
@@ -26,7 +26,7 @@ export class Personne {
         return this._prenom;
     }
 
-    public get adresse(): Adresse {
+    public get adresse(): Adresse|null {
         return this._adresse;
     }
 
@@ -44,7 +44,7 @@ export class Personne {
         this._prenom = _prenom;
     }
 
-    public set adresse(_adresse: Adresse) {
+    public set adresse(_adresse: Adresse|null) {
         this._adresse = _adresse;
     }
 
