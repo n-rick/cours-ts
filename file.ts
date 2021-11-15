@@ -71,5 +71,5 @@ for(const key in objet){
 
 // importation de fonction dans un autre fichier
 
-import {somme} from "./fonction";
-console.log(somme(10,80));
+import {somme as s} from "./fonction";
+console.log(s(10,80));
