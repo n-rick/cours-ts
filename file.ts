@@ -6,21 +6,6 @@
 // console.log('**************  | importer dynamiquement un module');
 // import("./fonction").then(m => console.log(m.somme1(2, 4)));
 
-import {Personne} from "./personne";
-let personne: Personne = new Personne();
-personne.num = 200;
-personne.nom = "Wick";
-personne.prenom = "John";
-console.log(personne);
-
-let personne2: Personne = new Personne(300, "Icar", "Joe");
-console.log(personne2);
-
-import { Adresse }  from "./adresse";
-let adresse: Adresse = new Adresse("avenue des champs", "13100","Aix-en-Provence");
-let moi:Personne = new Personne(20, "Fifi", "Enrick", adresse);
-console.log(moi);
-
 // console.log(2 ** 8); d'abord créer le ficher en ts puis le transpiler avec la commande tsc monFichier.ts
 // puis appeler le ficher avce la commande node monFIchier.js
 

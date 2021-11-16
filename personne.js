@@ -1,13 +1,17 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Personne = void 0;
-class Personne {
+var Personne = /** @class */ (function () {
     // private _num: number;
     // private _nom: string;
     // private _prenom: string;
     // simplification on met les visibilitées dans le constructeur 
     // CREATION DU CONSTRUCTEUR
-    constructor(_num = 0, _nom = "", _prenom = "", _adresse = null) {
+    function Personne(_num, _nom, _prenom, _adresse) {
+        if (_num === void 0) { _num = 0; }
+        if (_nom === void 0) { _nom = ""; }
+        if (_prenom === void 0) { _prenom = ""; }
+        if (_adresse === void 0) { _adresse = null; }
         this._num = _num;
         this._nom = _nom;
         this._prenom = _prenom;
@@ -16,31 +20,48 @@ class Personne {
         // this.nom = nom;
         // this.prenom = prenom;
     }
-    // GETTERS 
-    get num() {
-        return this._num;
-    }
-    get nom() {
-        return this._nom;
-    }
-    get prenom() {
-        return this._prenom;
-    }
-    get adresse() {
-        return this._adresse;
-    }
-    // SETTERS
-    set num(_num) {
-        this._num = (_num >= 0 ? _num : 0);
-    }
-    set nom(_nom) {
-        this._nom = _nom;
-    }
-    set prenom(_prenom) {
-        this._prenom = _prenom;
-    }
-    set adresse(_adresse) {
-        this._adresse = _adresse;
-    }
-}
+    Object.defineProperty(Personne.prototype, "num", {
+        // GETTERS 
+        get: function () {
+            return this._num;
+        },
+        // SETTERS
+        set: function (_num) {
+            this._num = (_num >= 0 ? _num : 0);
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Personne.prototype, "nom", {
+        get: function () {
+            return this._nom;
+        },
+        set: function (_nom) {
+            this._nom = _nom;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Personne.prototype, "prenom", {
+        get: function () {
+            return this._prenom;
+        },
+        set: function (_prenom) {
+            this._prenom = _prenom;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Personne.prototype, "adresse", {
+        get: function () {
+            return this._adresse;
+        },
+        set: function (_adresse) {
+            this._adresse = _adresse;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    return Personne;
+}());
 exports.Personne = Personne;

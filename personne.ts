@@ -1,5 +1,6 @@
 import { Adresse } from './adresse';
-export class Personne {
+import { MiseEnForme } from './mise-en-forme';
+export class Personne implements MiseEnForme {
     // private _num: number;
     // private _nom: string;
     // private _prenom: string;
@@ -7,10 +8,16 @@ export class Personne {
     // simplification on met les visibilitées dans le constructeur 
 
     // CREATION DU CONSTRUCTEUR
-    public constructor(private _num: number = 0, private _nom: string = "", private _prenom: string = "", private _adresse: Adresse|null = null) {
+    public constructor(private _num: number = 0, private _nom: string = "", private _prenom: string = "", private _adresse: Adresse | null = null) {
         this.num = _num;
         // this.nom = nom;
         // this.prenom = prenom;
+    }
+    afficherNomEnMajuscule(): void {
+        console.log(this.nom.toUpperCase());
+    }
+    afficherPrenomEnMajuscule(): void {
+        console.log(this._prenom.charAt(0).toUpperCase()+ this._prenom.slice(1));
     }
 
     // GETTERS 
@@ -26,7 +33,7 @@ export class Personne {
         return this._prenom;
     }
 
-    public get adresse(): Adresse|null {
+    public get adresse(): Adresse | null {
         return this._adresse;
     }
 
@@ -44,7 +51,7 @@ export class Personne {
         this._prenom = _prenom;
     }
 
-    public set adresse(_adresse: Adresse|null) {
+    public set adresse(_adresse: Adresse | null) {
         this._adresse = _adresse;
     }
 
