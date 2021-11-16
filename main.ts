@@ -2,6 +2,7 @@ import { Personne } from "./personne";
 import { Adresse } from "./adresse";
 import { Enseignant } from "./enseignant";
 import { Etudiant } from "./etudiant";
+import { Person } from "./person";
 
 let personne: Personne = new Personne(); // Si class en abstract on ne pourra plus l'instancier.
 personne.num = 200;
@@ -35,3 +36,6 @@ for (let objet of personnes) {
         console.log(`Pour le type Personne le num est : ${objet.num}`)
     }
 }
+
+let person:Person = {num:100, nom="wick", prenom:"John"};
+console.log(person);

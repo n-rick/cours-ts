@@ -20,6 +20,12 @@ var Personne = /** @class */ (function () {
         // this.nom = nom;
         // this.prenom = prenom;
     }
+    Personne.prototype.afficherNomEnMajuscule = function () {
+        console.log(this.nom.toUpperCase());
+    };
+    Personne.prototype.afficherPrenomEnMajuscule = function () {
+        console.log(this._prenom.charAt(0).toUpperCase() + this._prenom.slice(1));
+    };
     Object.defineProperty(Personne.prototype, "num", {
         // GETTERS 
         get: function () {

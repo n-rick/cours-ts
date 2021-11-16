@@ -23,9 +23,14 @@ function somme2(a, b) {
 console.log(somme2(5, 5));
 console.log("******* paramètre restrin ...numbers : ");
 // paramêtre restrein
-function somme4(...numbers) {
-    let result = 0;
-    for (let elt of numbers) {
+function somme4() {
+    var numbers = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        numbers[_i] = arguments[_i];
+    }
+    var result = 0;
+    for (var _a = 0, numbers_1 = numbers; _a < numbers_1.length; _a++) {
+        var elt = numbers_1[_a];
         result += elt;
     }
     return result;
@@ -37,9 +42,14 @@ console.log(somme4(10, 23));
 console.log(somme4(13));
 console.log("******* exo 1  : ");
 // exo : 
-function totalCaracteres(...strings) {
-    let result = 0;
-    for (let elt of strings) {
+function totalCaracteres() {
+    var strings = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        strings[_i] = arguments[_i];
+    }
+    var result = 0;
+    for (var _a = 0, strings_1 = strings; _a < strings_1.length; _a++) {
+        var elt = strings_1[_a];
         result += elt.length;
     }
     return result;
@@ -51,9 +61,14 @@ console.log(totalCaracteres("bon", "jour", "hello"));
 console.log(totalCaracteres("bon", "jour", "hello", "hi"));
 // exo 2
 console.log("******* exo 2 : ");
-function total(...values) {
-    let result = 0;
-    for (let elt of values) {
+function total() {
+    var values = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        values[_i] = arguments[_i];
+    }
+    var result = 0;
+    for (var _a = 0, values_1 = values; _a < values_1.length; _a++) {
+        var elt = values_1[_a];
         if (typeof elt == "string") {
             result += elt.length;
         }
